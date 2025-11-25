@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Settings</title>
+</head>
+<body>
+    <div class="header">
+        <div class="top-nav">
+            <a href="index.html">Home</a>
+            <p>Settings</p>
+            <a href="about.html">About</a>
+        </div>
+    </div>
+
+    <div class="settings-container">
+        <h1>Settings</h1>
+        <p>Customize your page preferences below.</p>
+        <div class="settings-button">
+            <p>Switch theme to:</p><button id="theme-toggle">Dark</button>
+        </div>
+    </div>
+
+    <script>
+        const body = document.body;
+        const toggle = document.getElementById("theme-toggle");
+
+        if (localStorage.getItem("theme") === "dark") {
+            body.classList.add("dark");
+            toggle.textContent = "Light";
+        } else {
+            toggle.textContent = "Dark";
+        }
+
+        toggle.addEventListener("click", () => {
+            body.classList.toggle("dark");
+
+            if (body.classList.contains("dark")) {
+                toggle.textContent = "Light";
+                localStorage.setItem("theme", "dark");
+            } else {
+                toggle.textContent = "Dark";
+                localStorage.setItem("theme", "light");
+            }
+        });
+    </script>
+
+</body>
+</html>

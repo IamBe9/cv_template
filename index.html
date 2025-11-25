@@ -3,9 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>CV Template</title>
 </head>
 <body>
-    
+    <div class="header">
+        <div class="top-nav">
+            <a href="settings.html">Settings</a>
+            <p>Welcome to My CV Template</p>
+            <a href="about.html">More About</a>
+        </div>
+        <div class="nav-line"></div>
+        <div class="bottom-nav">
+            <a href="#about">About</a>
+            <a href="#knowledge">Knowledge</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="About" id="about">
+            <h1>About</h1>
+            <p>
+                Hi, my name is <strong>[Your Name]</strong>, and I am a software developer.  
+                I specialize in building modern, efficient, and user-friendly applications.  
+                I enjoy working with various technologies and constantly improving my skills.  
+                My focus is on clean code, performance, and scalable solutions.
+            </p>
+            <p>
+                Outside of coding, I enjoy exploring new tools, learning, and improving my craft.
+                If you want to read more <a href="about.html">click here</a>.
+            </p>
+        </div>
+
+        <div class="Knowledge" id="knowledge">
+            <h1>My Knowledge</h1>
+            <ul>
+                <li><strong>Front-end:</strong> HTML, CSS, JavaScript, [Your Frameworks]</li>
+                <li><strong>Back-end:</strong> PHP, Python, Java, [Your Technologies]</li>
+                <li><strong>Tools:</strong> Git, Docker, Linux, VS Code, [Other Tools]</li>
+                <li><strong>Design:</strong> Basic UI/UX understanding</li>
+            </ul>
+        </div>
+
+        <div class="Experience" id="experience">
+            <h1>My Experience</h1>
+
+            <div class="block">
+                <h3>Full-stack Developer — Company Name (Period)</h3>
+                <p>
+                    Short description of responsibilities, technologies used, and results achieved.
+                </p>
+            </div>
+
+            <div class="block">
+                <h3>Front-end / Back-end Developer — Company Name (Period)</h3>
+                <p>
+                    Overview of tasks completed, systems worked on, and improvements contributed to.
+                </p>
+            </div>
+
+            <div class="block">
+                <h3>Internship — Company Name (Period)</h3>
+                <p>
+                    Brief summary of skills learned and practical experience during the internship.
+                </p>
+            </div>
+        </div>
+
+        <div class="Contact" id="contact">
+            <h1>Contact</h1>
+            <ul>
+                <li><p><strong>Email:</strong> your.email@example.com</p></li>
+                <li><p><strong>LinkedIn:</strong> <a href="#">Your LinkedIn</a></p></li>
+                <li><p><strong>GitHub:</strong> <a href="#">Your GitHub</a></p></li>
+            </ul>
+        </div>
+
+        <div>
+            <h1>More Information</h1>
+            <ul>
+                <li><p>If you want to read more <a href="about.html" style="text-decoration: underline;">click here</a></p></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 CV Template</p>
+    </div>
+
+    <script>
+        const body = document.body;
+
+        if (localStorage.getItem("theme") === "dark") {
+            body.classList.add("dark");
+        }
+    </script>
 </body>
 </html>
